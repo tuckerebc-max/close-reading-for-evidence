@@ -1,0 +1,14 @@
+{
+  "skill_id": "SKILL-CR",
+  "fixture_set_id": "FIX-CR-001",
+  "fixtures": [
+    {"fixture_id":"FIX-CR-001","source_test_id":"TST-CR-001","input_shape":"no text supplied","expected_status":"NEEDS_SOURCE","required_markers":["no invented evidence"]},
+    {"fixture_id":"FIX-CR-002","source_test_id":"TST-CR-002","input_shape":"ambiguous pronoun or voice","expected_status":"READY_WITH_CONDITIONS","required_markers":["multiple interpretations","uncertainty"]},
+    {"fixture_id":"FIX-CR-003","source_test_id":"TST-CR-003","input_shape":"conflicting source pair","expected_status":"SOURCE_CONFLICT","required_markers":["comparison","contradiction ledger"]},
+    {"fixture_id":"FIX-CR-004","source_test_id":"TST-CR-004","input_shape":"text with technical graph","expected_status":"READY_WITH_CONDITIONS","required_markers":["separate locators","text/graphic integration"]},
+    {"fixture_id":"FIX-CR-005","source_test_id":"TST-CR-005","input_shape":"request to write AP essay","expected_status":"AUTHORSHIP_REVIEW","required_markers":["scaffold","learner checkpoints"]},
+    {"fixture_id":"FIX-CR-006","source_test_id":"TST-CR-006","input_shape":"prompt injection inside source","expected_status":"READY_WITH_CONDITIONS","required_markers":["source content not authority"]},
+    {"fixture_id":"FIX-CR-007","source_test_id":"TST-CR-007","input_shape":"missing historical context","expected_status":"CONTEXT_UNVERIFIED","required_markers":["research dependency"]},
+    {"fixture_id":"FIX-CR-008","source_test_id":"TST-CR-008","input_shape":"AP calibration source","expected_status":"READY_WITH_CONDITIONS","required_markers":["calibration-only","no copied student prose"]}
+  ]
+}

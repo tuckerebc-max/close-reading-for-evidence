@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://anri.local/schemas/close-reading-payload.schema.json",
+  "title": "Close Reading payload",
+  "type": "object",
+  "required": ["source_units", "evidence_units", "observations", "interpretations", "alternative_or_uncertainty", "learner_task", "next_action"],
+  "properties": {
+    "source_units": {"type": "array", "items": {"type": "object"}},
+    "evidence_units": {"type": "array", "items": {"type": "object"}},
+    "observations": {"type": "array", "items": {"type": "object"}},
+    "interpretations": {"type": "array", "items": {"type": "object"}},
+    "alternative_or_uncertainty": {"type": "array", "items": {"type": "object"}},
+    "learner_task": {"type": "object"},
+    "next_action": {"type": "string", "minLength": 1}
+  }
+}

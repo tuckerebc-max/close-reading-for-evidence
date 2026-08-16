@@ -1,0 +1,32 @@
+{
+  "catalog_id": "CATALOG-SKILL-CR-001",
+  "schema_version": "0.1",
+  "as_of": "2026-08-15",
+  "source_snapshot": "2026-08-09",
+  "release_status": "finalized_private_draft",
+  "repository_visibility": "private",
+  "source_root_alias": "ANRI-TEXTBOOK-BUILD-2026-08-08",
+  "skills": [
+    {
+      "skill_id": "SKILL-CR",
+      "package_name": "close-reading-for-evidence",
+      "label": "Close Reading for Evidence",
+      "package_version": "0.1.0",
+      "status": "finalized_private_draft",
+      "allow_implicit_invocation": true,
+      "competency_id": "COMP-CR-EVIDENCE",
+      "canonical_source_ids": ["SPEC-CR-001", "ANRI-DOM-CR-001", "ARCH-CR-001", "CORP-CR-001"],
+      "evaluator_id": "EVAL-CR-001",
+      "source_paths": [
+        "02_Domain_Prompts/close-reading/close-reading-prompt.md",
+        "03_Corpora/close-reading/corpus-crosswalk.md",
+        "04_Technical_Specifications/close-reading/competency-design-specification.md",
+        "04_Technical_Specifications/close-reading/technical-specification.md",
+        "05_Textbook_Architectures/close-reading/textbook-architecture.md"
+      ],
+      "validation_test_ids": ["TST-CR-001", "TST-CR-002", "TST-CR-003", "TST-CR-004", "TST-CR-005", "TST-CR-006", "TST-CR-007", "TST-CR-008", "TST-INT-001", "TST-INT-002"],
+      "handoff_ids": ["HOF-CR-WR-001", "HOF-CR-ARG-001"],
+      "paths": {"skill": "SKILL.md", "ui_metadata": "agents/openai.yaml", "evaluator": "references/evaluator-spec.json", "codification": "references/competency-codification.md", "representative_record": "tests/fixtures/representative-record.json"}
+    }
+  ]
+}

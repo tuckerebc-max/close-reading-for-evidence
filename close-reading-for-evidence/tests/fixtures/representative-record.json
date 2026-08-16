@@ -1,0 +1,32 @@
+{
+  "artifact_id": "ART-CR-FIX-001",
+  "project_id": "PRJ-ANRI-2026-0808",
+  "task_id": "TASK-CR-FIX-001",
+  "parent_artifact_ids": [],
+  "skill_id": "SKILL-CR",
+  "skill_version": "0.1.0",
+  "artifact_type": "close_reading_evidence_record",
+  "status": "READY_WITH_CONDITIONS",
+  "task_contract": {"question_or_problem":"How does the supplied passage establish a shift in perspective?","purpose":"build a located evidence record","audience":"learner and teacher","grade_band_or_course":"secondary ELA","discipline_or_context":"literary reading","mode":"literary","constraints":["use supplied passage only"],"burden_or_standard":"qualified interpretation"},
+  "payload": {
+    "source_units": [{"source_id":"SRC-CR-001","locator":"p. 2, paragraph 3"}],
+    "evidence_units": [{"evidence_id":"EVD-CR-001","source_id":"SRC-CR-001","locator":"p. 2, paragraph 3","status":"verified"}],
+    "observations": [{"observation_id":"OBS-CR-001","text":"The pronoun changes after the paragraph break."}],
+    "interpretations": [{"interpretation_id":"INT-CR-001","text":"The shift may reposition the narrator's relation to the event.","warrant":"The changed pronoun and surrounding transition connect the observation to the interpretation."}],
+    "alternative_or_uncertainty": [{"uncertainty_id":"UNC-CR-001","text":"Historical context is not supplied; the interpretation remains qualified."}],
+    "learner_task": {"prompt":"Confirm whether the evidence supports the interpretation and record one alternative."},
+    "next_action":"Learner confirms interpretation and selects a transfer route."
+  },
+  "source_ids": ["SRC-CR-001"],
+  "evidence_ids": ["EVD-CR-001"],
+  "claim_ids": ["CLM-CR-001"],
+  "uncertainty_ids": ["UNC-CR-001"],
+  "provenance_ids": ["PROV-CR-001"],
+  "learner_decisions": [{"decision_id":"DEC-CR-001","checkpoint":"interpretation","options_considered":["shift in perspective","shift in time"],"selected_option":"shift in perspective","reason":"best fit to located evidence","artifact_effect":"qualifies interpretation"}],
+  "ai_use_log": [{"action":"organized supplied observations","inputs":["SRC-CR-001"],"human_confirmation":true,"omissions_or_risks":["context not supplied"]}],
+  "accessibility_notes": [],
+  "rights_and_permissions": [{"source_or_basis":"user-supplied passage","status":"pending","note":"No redistribution of source text."}],
+  "unresolved_items": [],
+  "qa_checks": [],
+  "next_action": "Learner confirms interpretation and transfer route."
+}

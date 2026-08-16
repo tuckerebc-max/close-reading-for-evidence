@@ -1,0 +1,20 @@
+{
+  "evaluator_id": "EVAL-CR-001",
+  "skill_id": "SKILL-CR",
+  "competency_id": "COMP-CR-EVIDENCE",
+  "version": "0.1.0",
+  "canonical_sources": ["SPEC-CR-001", "ANRI-DOM-CR-001", "ARCH-CR-001", "CORP-CR-001"],
+  "functional_requirement_ids": ["FR-CR-01", "FR-CR-02", "FR-CR-03", "FR-CR-04", "FR-CR-05", "FR-CR-06", "FR-CR-07", "FR-CR-08", "FR-CR-09"],
+  "observable_performance_ids": ["OP-CR-01", "OP-CR-02", "OP-CR-03", "OP-CR-04", "OP-CR-05", "OP-CR-06", "OP-CR-07", "OP-CR-08"],
+  "diagnostic_dimensions": ["locator_accuracy", "observation_inference_distinction", "interpretation_warrant", "source_representation_fit", "qualification", "transfer_readiness"],
+  "required_test_ids": ["TST-CR-001", "TST-CR-002", "TST-CR-003", "TST-CR-004", "TST-CR-005", "TST-CR-006", "TST-CR-007", "TST-CR-008", "TST-INT-001", "TST-INT-002"],
+  "checks": [
+    {"check_id":"CR-CHECK-001","type":"required_paths","paths":["skill_id","skill_version","task_contract","payload.source_units","payload.evidence_units","source_ids","evidence_ids","next_action"],"failure_status":"NEEDS_SOURCE","message":"Task, source, evidence, and next-action records are required."},
+    {"check_id":"CR-CHECK-002","type":"all_items_have","path":"payload.source_units","fields":["source_id","locator"],"failure_status":"NEEDS_LOCATOR","message":"Every source unit needs a source ID and recoverable locator."},
+    {"check_id":"CR-CHECK-003","type":"all_items_have","path":"payload.evidence_units","fields":["evidence_id","source_id","locator","status"],"failure_status":"PROVENANCE_AUDIT","message":"Every evidence unit needs source linkage, locator, and status."},
+    {"check_id":"CR-CHECK-004","type":"unique_values","path":"evidence_ids","failure_status":"PROVENANCE_AUDIT","message":"Evidence IDs must not be duplicated across a handoff."},
+    {"check_id":"CR-CHECK-005","type":"present_paths","paths":["uncertainty_ids","provenance_ids","learner_decisions","ai_use_log","accessibility_notes","rights_and_permissions"],"failure_status":"NEEDS_REVIEW","message":"Uncertainty, provenance, learner, access, rights, and AI-use fields must remain visible even when empty."},
+    {"check_id":"CR-CHECK-006","type":"manual_review","topic":"interpretation and authorship","condition":"Human review is required when context is missing, an assessed product is requested, or a transfer record is promoted to WR or ARG."}
+  ],
+  "release_conditions": ["No invented passage, quote, locator, context claim, or author intent.", "AP/calibration sources remain versioned and rights-bounded.", "CR-to-WR and CR-to-ARG handoffs receive human review."]
+}

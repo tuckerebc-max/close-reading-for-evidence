@@ -1,0 +1,6 @@
+interface:
+  display_name: "Close Reading for Evidence"
+  short_description: "Trace evidence and qualified inference"
+  default_prompt: "Use $close-reading-for-evidence to analyze the supplied text with locators, uncertainty, and a learner evidence artifact."
+policy:
+  allow_implicit_invocation: true
